@@ -29,7 +29,7 @@ zk_hosts = os.getenv('zk_hosts', "zookeeper:2181")
 zk_path_to_master = zk_base + "/master"
 
 def logger(msg):
-    print datetime.datetime.now() + ": " + msg
+    print datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ": " + msg
     sys.stdout.flush()
 
 def signal_handler(signal, frame):
